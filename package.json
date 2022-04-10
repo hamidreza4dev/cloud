@@ -1,0 +1,42 @@
+{
+  "name": "cloud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "@tailwindcss/forms": "^0.5.0",
+    "@tailwindcss/line-clamp": "^0.3.1",
+    "@tailwindcss/typography": "^0.5.2",
+    "animated-tailwindcss": "^3.2.7",
+    "autoprefixer": "^10.4.4",
+    "babel-loader": "^8.2.4",
+    "css-loader": "^6.7.1",
+    "html-loader": "^3.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "node-sass": "^7.0.1",
+    "postcss": "^8.4.12",
+    "postcss-loader": "^6.2.1",
+    "posthtml": "^0.16.6",
+    "posthtml-expressions": "^1.9.0",
+    "posthtml-include": "^1.7.3",
+    "posthtml-loader": "^2.0.1",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "svg-url-loader": "^7.1.1",
+    "tailwindcss": "^3.0.23",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1"
+  }
+}
