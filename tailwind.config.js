@@ -4,11 +4,10 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require('animated-tailwindcss'),
+    require('animatecss-tailwind'),
     require('@tailwindcss/forms'),
     require('@tailwindcss/line-clamp'),
     require('@tailwindcss/typography'),
-    require('./plugins/tailwind-animation-delay'),
-    require('./plugins/tailwind-table-padding'),
+    require('tailwind-table-padding'),
   ],
 };
