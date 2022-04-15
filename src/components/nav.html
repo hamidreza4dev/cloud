@@ -1,0 +1,59 @@
+<div class="container bg-white py-5">
+  <nav class="flex justify-between items-center">
+    <div class="flex items-center gap-16">
+      <div><img src="./assets/logo.png" alt=""></div>
+      <ul class="text-base text-primary-gray flex leading-6 font-normal lg:hidden">
+        <li><a href="#" class="px-4 py-2">معرفی پروژه های GPU</a></li>
+        <li><a href="#" class="px-4 py-2">تعرفه ها</a>
+          <ul>
+            <li><a href="#" class="block px-4 py-2">سرویس CPU</a></li>
+            <li><a href="#" class="block px-4 py-2">سرویس GPU</a></li>
+            <li><a href="#" class="block px-4 py-2">سرویس VPS</a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="px-4 py-2">سوالات متداول</a></li>
+        <li><a href="#" class="px-4 py-2">درباره ما</a></li>
+        <li><a href="#" class="px-4 py-2">راه های ارتباطی</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="flex items-center gap-6">
+        <button class="accordion-btn hidden lg:block" data-target="#mobileMenu"><i class="icon icon-menu"></i></button>
+
+        <div class="relative">
+          <button id="searchBtn" data-tooltip="جستجو" data-tooltip-dir="right"><i class="icon icon-search-normal text-primary-gray"></i></button>
+          <div id="searchBox">
+            <form class="flex flex-col gap-2 bg-white p-4 rounded-lg shadow-xl">
+              <label for="searchInput" class="text-primary-gray text-sm">جستجو</label>
+              <div class="flex">
+                <input type="search" class="rounded-l-none" id="searchInput" name="searchInput">
+                <button type="submit" class="btn btn-lg btn-primary px-4 rounded-r-none"><i class="icon icon-search-normal text-white"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <a href="#" class="btn btn-lg btn-primary">ورود / ثبت نام</a>
+      </div>
+    </div>
+  </nav>
+
+  <div id="mobileMenu" class="accordion-panel">
+    <div class="flex flex-col gap-16 py-4">
+      <ul class="text-base text-primary-gray flex leading-6 font-normal flex-col">
+        <li><a href="#" class="block px-4 py-2">معرفی پروژه های GPU</a></li>
+        <li><a class="px-4 py-2 accordion-btn flex">تعرفه ها<span class="-rotate-90 inline-block mr-2"><i class="icon icon-arrow-left"></i></span></a>
+          <ul class="accordion-panel pr-4">
+            <li><a href="#" class="block px-4 py-2">سرویس CPU</a></li>
+            <li><a href="#" class="block px-4 py-2">سرویس GPU</a></li>
+            <li><a href="#" class="block px-4 py-2">سرویس VPS</a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="block px-4 py-2">سوالات متداول</a></li>
+        <li><a href="#" class="block px-4 py-2">درباره ما</a></li>
+        <li><a href="#" class="block px-4 py-2">راه های ارتباطی</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

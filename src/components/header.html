@@ -1,7 +1,35 @@
-<header>
-  <nav>
-    <ul>
-      <li><a href="#">{{ title }}</a></li>
-    </ul>
-  </nav>
-</header>
+<div>
+  <div class="header-swiper">
+    <div class="swiper swiper-handler">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide h-[70vh]">
+          <!-- <img src="" class="w-full h-full" alt=""> -->
+          <div class="w-full h-full bg-primary"></div>
+        </div>
+        <div class="swiper-slide h-[70vh]">
+          <!-- <img src="" class="w-full h-full" alt=""> -->
+          <div class="w-full h-full bg-primary-300"></div>
+        </div>
+        <div class="swiper-slide h-[70vh]">
+          <!-- <img src="" class="w-full h-full" alt=""> -->
+          <div class="w-full h-full bg-primary-700"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container flex items-center justify-between pt-11 pb-5">
+      <div class="flex">
+        <div class="swiper-button-prev-custom">
+          <button class="bg-white text-primary hover:bg-gray-200 transition w-12 h-12 flex items-center justify-center rounded-full"><i class="icon icon-arrow-right !text-4xl"></i></button>
+        </div>
+        <div class="swiper-button-next-custom">
+          <button class="bg-white text-primary hover:bg-gray-200 transition w-12 h-12 flex items-center justify-center rounded-full"><i class="icon icon-arrow-left !text-4xl"></i></button>
+        </div>
+      </div>
+
+      <div>
+        <div class="swiper-pagination-custom"></div>
+      </div>
+    </div>
+  </div>
+</div>

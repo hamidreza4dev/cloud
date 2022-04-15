@@ -2,7 +2,10 @@ const path = require('path');
 const webpackAllHtmlFilesPlugin = require('./plugins/webpack.html-files');
 
 module.exports = {
-  entry: path.join(__dirname, '/src/js/app.js'),
+  entry: {
+    main: path.join(__dirname, '/src/js/app.js'),
+    vendor: path.join(__dirname, '/src/js/vendor.js'),
+  },
   stats: 'errors-warnings',
   output: {
     assetModuleFilename: 'images/[hash][ext][query]',
@@ -18,7 +21,7 @@ module.exports = {
         test: /\.(png|jpg|svg|gif|jpeg)/,
         type: 'asset/resource',
       },
-      {
+      /* {
         test: /\.(jpe?g|png|gif)$/,
         loader: 'url-loader',
         options: {
@@ -32,7 +35,7 @@ module.exports = {
           limit: 10 * 1024,
           noquotes: true,
         },
-      },
+      }, */
     ],
   },
   plugins: [...webpackAllHtmlFilesPlugin('src')],

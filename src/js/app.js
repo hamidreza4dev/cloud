@@ -1,2 +1,8 @@
 import '../scss/tailwind.scss';
-console.log('Its working !');
+import './accordion';
+
+const searchBtn = document.querySelector('#searchBtn');
+const searchBox = document.querySelector('#searchBox');
+searchBtn.addEventListener('click', () => {
+  searchBox.classList.toggle('active');
+});
