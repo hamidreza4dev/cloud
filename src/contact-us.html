@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- leaflet-js -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+  <script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+</head>
+<body>
+
+  <header>
+    <include src="./components/nav.html"></include>
+
+    <section class="bg-primary">
+      <div class="min-h-[50vh] container flex items-center justify-center relative">
+        <h1 class="text-5xl sm:text-3xl font-extrabold text-primary-50">تماس با ما</h1>
+
+        <div class="absolute bottom-6">
+          <button class="relative w-10 h-10 flex items-center justify-center" id="scrollDown">
+            <div class="bg-primary-50 w-10 h-10 animate-ping rounded-full absolute inset-0"></div>
+            <i class="icon icon-arrow-down text-primary-50 !text-3xl"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+  </header>
+
+
+  <section>
+    <div class="flex items-center gap-6 my-28 container lg:flex-wrap">
+      <div class="w-4/12 lg:w-full">
+        <h1 class="text-bold text-4xl">تماس با ما</h1>
+        <p class="mt-4 text-primary-gray font-light">شما میتوانید در این قسمت ما با در تماس باشید</p>
+
+        <div class="mt-8 flex flex-col gap-y-4 lg:flex-row lg:flex-wrap">
+          <div class="flex items-center gap-6 lg:w-1/2 lg:pl-4 xs:w-full">
+            <div class="bg-secondary min-w-[4rem] h-16 inline-flex items-center justify-center rounded-full"><span><i class="icon icon-call text-primary-white"></i></span></div>
+            <p>شماره تلفن: <span>09123456789</span></p>
+          </div>
+
+          <div class="flex items-center gap-6 lg:w-1/2 lg:pl-4 xs:w-full">
+            <div class="bg-secondary min-w-[4rem] h-16 inline-flex items-center justify-center rounded-full"><span><i class="icon icon-instagram text-primary-white"></i></span></div>
+            <p>اینستاگرام: <span>ferdosi.official</span></p>
+          </div>
+
+          <div class="flex items-center gap-6 lg:w-1/2 lg:pl-4 xs:w-full">
+            <div class="bg-secondary min-w-[4rem] h-16 inline-flex items-center justify-center rounded-full"><span><i class="icon icon-whatsapp text-primary-white"></i></span></div>
+            <p>واستاپ: <span>09123456789</span></p>
+          </div>
+
+          <div class="flex items-center gap-6 lg:w-1/2 lg:pl-4 xs:w-full">
+            <div class="bg-secondary min-w-[4rem] h-16 inline-flex items-center justify-center rounded-full"><span><i class="icon icon-24-support text-primary-white"></i></span></div>
+            <p> پشتیبانی: <span>gpu@unimats.ir</span></p>
+          </div>
+
+          <div class="flex items-center gap-6 lg:w-1/2 lg:pl-4 xs:w-full">
+            <div class="bg-secondary min-w-[4rem] h-16 inline-flex items-center justify-center rounded-full"><span><i class="icon icon-mail text-primary-white"></i></span></div>
+            <p> ایمیل: <span>gpu@unimats.ir</span></p>
+          </div>
+
+          <div class="flex items-center gap-6 lg:w-1/2 lg:pl-4 xs:w-full">
+            <div class="bg-secondary min-w-[4rem] h-16 inline-flex items-center justify-center rounded-full"><span><i class="icon icon-location text-primary-white"></i></span></div>
+            <p class="grow"> آدرس: <span>خراسان رضوی ، مشهد ، بلوار شهید کلاهدوز ، کلاهدوز ۳۰ ، پلاک ۹۴ ، طبقه ۴</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="w-8/12 lg:w-full h-screen rounded-lg sm:h-96" id="map"></div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="rounded-lg bg-primary-white bg-repeat heropattern-topography-gray-100 p-12 mb-28 container">
+      <div class="flex items-center justify-between md:flex-col md:text-justify md:item-center md:gap-6">
+        <div>
+          <h1 class="font-bold text-2xl mb-2">ارسال تیکت</h1>
+          <p>برای ارسال تیکت و ارتباط با پشتیبانی وبسایت میتوانید از این قسمت اقدام کنید</p>
+        </div>
+        <button class="btn btn-lg btn-primary md:w-full">ارسال</button>
+      </div>
+    </div>
+  </section>
+
+  <include src="./components/footer.html"></include>
+</body>
+</html>

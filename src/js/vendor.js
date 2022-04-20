@@ -1,4 +1,6 @@
 import Swiper, { Navigation, Pagination } from 'swiper';
+// import 'leaflet';
+// import 'leaflet/dist/leaflet.css';
 import Aos from 'aos';
 Aos.init();
 

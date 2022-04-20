@@ -9,7 +9,7 @@ module.exports = {
   stats: 'errors-warnings',
   output: {
     assetModuleFilename: 'images/[hash][ext][query]',
-    path: path.resolve(__dirname, '/dist'),
+    path: path.join(__dirname, '/dist'),
   },
   module: {
     rules: [

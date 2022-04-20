@@ -1,0 +1,14 @@
+%hover-underline-style {
+  @apply relative;
+
+  &:hover {
+    &::before {
+      @apply w-full;
+    }
+  }
+
+  &::before {
+    content: '';
+    @apply h-0.5 w-0 bg-primary-gray/30 rounded-full absolute right-0 bottom-0 z-20 transition-[width];
+  }
+}
