@@ -2,7 +2,7 @@ export default (function () {
   const accordion = document.querySelectorAll('.accordion-btn');
   if (accordion.length) {
     accordion.forEach((accordionItem) => {
-      accordionItem.addEventListener('click', () => {
+      accordionItem.addEventListener('click', async () => {
         accordionItem.classList.toggle('active');
 
         let panel;

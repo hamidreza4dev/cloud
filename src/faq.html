@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- leaflet-js -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+  <script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+</head>
+<body>
+
+  <header>
+    <include src="./components/nav.html"></include>
+
+    <section class="bg-primary heropattern-tictactoe-primary-450">
+      <div class="min-h-[50vh] container flex items-center justify-center relative">
+        <h1 class="text-5xl sm:text-3xl font-extrabold text-primary-50">سوالات متداول</h1>
+
+        <div class="absolute bottom-6">
+          <button class="relative w-10 h-10 flex items-center justify-center" id="scrollDown">
+            <div class="bg-primary-50 w-10 h-10 animate-ping rounded-full absolute inset-0"></div>
+            <i class="icon icon-arrow-down text-primary-50 !text-3xl"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+  </header>
+
+
+  <section class="my-28">
+    <h1 class="text-bold text-4xl mb-6 text-center">تماس با ما</h1>
+
+    <div class="container space-y-4">
+      <div class="p-8 border border-primary-gray/30 rounded-lg" data-aos="fade-right" data-aos-once="true">
+        <button class="accordion-btn">شرایط استفاده از کد تخفیف چگونه است؟<i class="icon icon-angle-down"></i></button>
+        <div class="accordion-panel">
+          <div class="pt-4">
+            <ul class="list-disc list-inside text-primary-gray space-y-2 font-light">
+              <li>هر کد تخفیف فقط یک بار قابل استفاده می‌باشد</li>
+              <li>هر کد تخفیف فقط یک بار قابل استفاده می‌باشد</li>
+              <li>هر کد تخفیف فقط یک بار قابل استفاده می‌باشد</li>
+            </ul>
+            <video controls class="w-full rounded-lg mt-4" data-aos="zoom-in-right" data-aos-once="true">
+              <source type="video/mp4">
+              <source type="video/ogg">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-8 border border-primary-gray/30 rounded-lg" data-aos="fade-left" data-aos-once="true">
+        <button class="accordion-btn">شرایط استفاده از کد تخفیف چگونه است؟<i class="icon icon-angle-down"></i></button>
+        <div class="accordion-panel">
+          <div class="pt-4">
+            <ul class="list-disc list-inside text-primary-gray space-y-2 font-light">
+              <li>هر کد تخفیف فقط یک بار قابل استفاده می‌باشد</li>
+              <li>هر کد تخفیف فقط یک بار قابل استفاده می‌باشد</li>
+              <li>هر کد تخفیف فقط یک بار قابل استفاده می‌باشد</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <include src="./components/footer.html"></include>
+</body>
+</html>

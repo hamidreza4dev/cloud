@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- leaflet-js -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+  <script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+</head>
+<body>
+
+  <header>
+    <include src="./components/nav.html"></include>
+
+    <section class="bg-primary heropattern-tictactoe-primary-450">
+      <div class="min-h-[50vh] container flex items-center justify-center relative">
+        <h1 class="text-5xl sm:text-3xl font-extrabold text-primary-50">تعرفه های سرویس CPU</h1>
+
+        <div class="absolute bottom-6">
+          <button class="relative w-10 h-10 flex items-center justify-center" id="scrollDown">
+            <div class="bg-primary-50 w-10 h-10 animate-ping rounded-full absolute inset-0"></div>
+            <i class="icon icon-arrow-down text-primary-50 !text-3xl"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+  </header>
+
+
+  <section class="my-28">
+    <h1 class="text-bold text-4xl mb-6 text-center">تعرفه های سرویس CPU</h1>
+
+    <div class="container space-y-4">
+      <div class="flex lg:flex-wrap">
+        <div class="w-1/3 lg:w-1/2 mx-auto sm:w-full">
+          <div class="mx-3 my-3 p-6 border border-primary-gray/30 rounded-lg bg-white"  data-aos-once="true" data-aos-duration="800" data-aos-offset="300">
+            <div class="flex justify-end"><span><i class="icon icon-heart !text-5xl"></i></span></div>
+
+            <div class="mt-7">
+              <h1 class="text-3xl lg:text-2xl md:text-xl sm:text-lg font-extrabold">۳۰۰ هزار تومان (ماهیانه)</h1>
+              <p class="text-primary-gray font-light mt-3.5">
+                توضیحات سرویس در این قسمت قرار بگیرد . لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ است.
+              </p>
+              <hr class="my-7">
+              <h2 class="text-xl font-bold">امکانات:</h2>
+              <ul class="list-check space-y-2 mt-4 checkbox-secondary">
+                <li>راه اندازی رایگان</li>
+                <li>هسته پردازنده :‌ ۲</li>
+                <li>رم :‌ ۴ گیگ</li>
+                <li>هارد ۱۰۰ گیگابایت SSD</li>
+                <li>ترافیک : نامحدود</li>
+                <li>کارت شبکه : ۱۰۰۰ mbps</li>
+                <li>آیپی : valid (ipv4)</li>
+              </ul>
+              <button class="btn btn-lg btn-secondary w-full mt-12">انتخاب</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-1/3 lg:w-1/2 mx-auto sm:w-full">
+          <div class="mx-3 my-3 p-6 border border-primary-gray/30 rounded-lg bg-white"  data-aos-once="true" data-aos-duration="800" data-aos-offset="300">
+            <div class="flex justify-end"><span><i class="icon icon-star !text-5xl"></i></span></div>
+
+            <div class="mt-7">
+              <h1 class="text-3xl lg:text-2xl md:text-xl sm:text-lg font-extrabold">۹۰۰ هزار تومان (ماهیانه)</h1>
+              <p class="text-primary-gray font-light mt-3.5">
+                توضیحات سرویس در این قسمت قرار بگیرد . لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ است.
+              </p>
+              <hr class="my-7">
+              <h2 class="text-xl font-bold">امکانات:</h2>
+              <ul class="list-check space-y-2 mt-4 checkbox-secondary">
+                <li>راه اندازی رایگان</li>
+                <li>هسته پردازنده :‌ ۲</li>
+                <li>رم :‌ ۴ گیگ</li>
+                <li>هارد ۱۰۰ گیگابایت SSD</li>
+                <li>ترافیک : نامحدود</li>
+                <li>کارت شبکه : ۱۰۰۰ mbps</li>
+                <li>آیپی : valid (ipv4)</li>
+              </ul>
+              <button class="btn btn-lg btn-secondary w-full mt-12">انتخاب</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-1/3 lg:w-1/2 mx-auto sm:w-full">
+          <div class="mx-3 my-3 p-6 border border-primary-gray/30 rounded-lg bg-white"  data-aos-once="true" data-aos-duration="800" data-aos-offset="300">
+            <div class="flex justify-end"><span><i class="icon icon-hashtag !text-5xl"></i></span></div>
+
+            <div class="mt-7">
+              <h1 class="text-3xl lg:text-2xl md:text-xl sm:text-lg font-extrabold">۱۲۰۰ هزار تومان (ماهیانه)</h1>
+              <p class="text-primary-gray font-light mt-3.5">
+                توضیحات سرویس در این قسمت قرار بگیرد . لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ است.
+              </p>
+              <hr class="my-7">
+              <h2 class="text-xl font-bold">امکانات:</h2>
+              <ul class="list-check space-y-2 mt-4 checkbox-secondary">
+                <li>راه اندازی رایگان</li>
+                <li>هسته پردازنده :‌ ۲</li>
+                <li>رم :‌ ۴ گیگ</li>
+                <li>هارد ۱۰۰ گیگابایت SSD</li>
+                <li>ترافیک : نامحدود</li>
+                <li>کارت شبکه : ۱۰۰۰ mbps</li>
+                <li>آیپی : valid (ipv4)</li>
+              </ul>
+              <button class="btn btn-lg btn-secondary w-full mt-12">انتخاب</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <include src="./components/footer.html"></include>
+</body>
+</html>

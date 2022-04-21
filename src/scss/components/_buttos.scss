@@ -6,6 +6,7 @@
       stroke, opacity, box-shadow;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
+    white-space: nowrap;
   }
 
   .btn-sm {
@@ -20,6 +21,10 @@
 
   .btn-primary {
     @apply bg-primary-600 hover:bg-primary-700 text-white ring-0 ring-primary-400 focus:ring-4;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary-400 text-white ring-0 ring-secondary-400 focus:ring-4;
   }
 
   .btn-alternative {

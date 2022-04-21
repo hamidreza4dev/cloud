@@ -1,10 +1,11 @@
 @layer components {
   .accordion-btn {
-    @apply transition;
+    @apply transition flex items-center gap-2 w-full justify-between;
   }
 
   .accordion-btn i {
     transition: transform ease 250ms;
+    display: inline-block;
   }
 
   .accordion-btn.active i {
