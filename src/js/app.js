@@ -20,16 +20,18 @@ searchBtn.addEventListener('click', () => {
 
 // scroll down btn
 const btnScrollDown = document.querySelector('#scrollDown');
-btnScrollDown.addEventListener('click', (e) => {
-  /** @type {HTMLElement} */
-  const target = e.target.closest('header');
-  if (!target) return;
+if (btnScrollDown) {
+  btnScrollDown.addEventListener('click', (e) => {
+    /** @type {HTMLElement} */
+    const target = e.target.closest('header');
+    if (!target) return;
 
-  window.scrollTo({
-    top: target.nextElementSibling.getBoundingClientRect().top - 30,
-    behavior: 'smooth',
+    window.scrollTo({
+      top: target.nextElementSibling.getBoundingClientRect().top - 30,
+      behavior: 'smooth',
+    });
   });
-});
+}
 
 // map configuration
 window.addEventListener('load', function () {
