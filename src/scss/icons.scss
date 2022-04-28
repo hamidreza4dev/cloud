@@ -1,9 +1,9 @@
 @font-face {
     font-family: "icons";
-    src: url("../fonts/icons.ttf?165f652e645780c25108048597dd5a94") format("truetype"),
-url("../fonts/icons.woff?165f652e645780c25108048597dd5a94") format("woff"),
-url("../fonts/icons.woff2?165f652e645780c25108048597dd5a94") format("woff2"),
-url("../fonts/icons.eot?165f652e645780c25108048597dd5a94#iefix") format("embedded-opentype");
+    src: url("../fonts/icons.ttf?c1951285add847334dc9da0963026617") format("truetype"),
+url("../fonts/icons.woff?c1951285add847334dc9da0963026617") format("woff"),
+url("../fonts/icons.woff2?c1951285add847334dc9da0963026617") format("woff2"),
+url("../fonts/icons.eot?c1951285add847334dc9da0963026617#iefix") format("embedded-opentype");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
@@ -80,9 +80,12 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-tick-square:before {
     content: "\f115";
 }
-.icon-user-edit:before {
+.icon-trash:before {
     content: "\f116";
 }
-.icon-whatsapp:before {
+.icon-user-edit:before {
     content: "\f117";
+}
+.icon-whatsapp:before {
+    content: "\f118";
 }

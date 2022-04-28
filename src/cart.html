@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- leaflet-js -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+  <script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+</head>
+<body>
+
+  <header>
+    <include src="./components/nav.html"></include>
+  </header>
+
+
+  <section class="heropattern-tictactoe-primary-white py-24">
+    <div class="container">
+      <div class="flex flex-wrap">
+        <div class="w-8/12 lg:w-7/12 md:w-full">
+          <div class="p-2">
+            <div class="border-gray-300 border rounded-lg bg-white p-6 lg:p-4">
+              <div class="flex items-center justify-between">
+                <h1 class="text-xl font-bold sm:font-base xs:text-sm">سبد خرید شما :</h1>
+                <button class="btn btn-sm btn-icon text-red-500 rounded-lg hover:bg-red-500/10 sm:p-0 sm:hover:bg-white xs:text-xs"><i class="icon icon-trash sm:!text-sm"></i>پاک کردن سبد خرید</button>
+              </div>
+
+              <div class="mt-4 space-y-2">
+                <div class="font-light flex overflow-hidden border-gray-300 border rounded-lg bg-white xs:flex-col">
+                  <div class="grow-0 flex flex-col items-center bg-secondary-50 py-3 px-6">
+                    <div><img src="./assets/icons/gpu.svg" alt=""></div>
+                    <p class="text-primary whitespace-nowrap">۵۲۰،۰۰۰ تومان</p>
+                  </div>
+                  <div class="grow">
+                    <div class="p-3 flex flex-col h-full">
+                      <div class="flex justify-between">
+                        <h1 class="font-bold">سرویس CPU rendering</h1>
+                        <span class="cursor-pointer"><i class="icon icon-trash text-red-500"></i></span>
+                      </div>
+
+                      <div class="mt-auto">
+                        <p class="mt-2 font-bold text-sm">امکانات :</p>
+                        <ul class="flex flex-wrap -mr-2">
+                          <li class="w-1/4 lg:w-1/2 md:w-1/3 sm:w-1/2 xs:w-full"><div class="px-2 py-1 text-xs font-medium">هسته پردازنده :‌ ۲</div></li>
+                          <li class="w-1/4 lg:w-1/2 md:w-1/3 sm:w-1/2 xs:w-full"><div class="px-2 py-1 text-xs font-medium">رم :‌ ۴ گیگ</div></li>
+                          <li class="w-1/4 lg:w-1/2 md:w-1/3 sm:w-1/2 xs:w-full"><div class="px-2 py-1 text-xs font-medium">کارت شبکه : ۱۰۰۰ mbps</div></li>
+                          <li class="w-1/4 lg:w-1/2 md:w-1/3 sm:w-1/2 xs:w-full"><div class="px-2 py-1 text-xs font-medium">ترافیک : نامحدود</div></li>
+                          <li class="w-1/4 lg:w-1/2 md:w-1/3 sm:w-1/2 xs:w-full"><div class="px-2 py-1 text-xs font-medium">راه اندازی رایگان</div></li>
+                          <li class="w-1/4 lg:w-1/2 md:w-1/3 sm:w-1/2 xs:w-full"><div class="px-2 py-1 text-xs font-medium">هارد ۱۰۰ گیگابایت SSD</div></li>
+                          <li class="w-1/4 lg:w-1/2 md:w-1/3 sm:w-1/2 xs:w-full"><div class="px-2 py-1 text-xs font-medium">آیپی : valid (ipv4)</div></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="font-light flex overflow-hidden border-gray-300 border rounded-lg bg-white xs:flex-col">
+                  <div class="grow-0 flex flex-col items-center bg-secondary-50 py-3 px-6">
+                    <div><img src="./assets/icons/gpu.svg" alt=""></div>
+                    <p class="text-primary whitespace-nowrap">۵۲۰،۰۰۰ تومان</p>
+                  </div>
+                  <div class="grow">
+                    <div class="p-3 flex flex-col h-full">
+                      <div class="flex justify-between">
+                        <h1 class="font-bold">سرویس CPU rendering</h1>
+                        <span class="cursor-pointer"><i class="icon icon-trash text-red-500"></i></span>
+                      </div>
+
+                      <div class="mt-auto">
+                        <p class="mt-2 font-bold text-sm">امکانات :</p>
+                        <ul class="flex flex-wrap -mr-2">
+                          <li class="w-1/4 lg:w-1/2 md:w-1/3 sm:w-1/2 xs:w-full"><div class="px-2 py-1 text-xs font-medium">هسته پردازنده :‌ ۲</div></li>
+                          <li class="w-1/4 lg:w-1/2 md:w-1/3 sm:w-1/2 xs:w-full"><div class="px-2 py-1 text-xs font-medium">رم :‌ ۴ گیگ</div></li>
+                          <li class="w-1/4 lg:w-1/2 md:w-1/3 sm:w-1/2 xs:w-full"><div class="px-2 py-1 text-xs font-medium">کارت شبکه : ۱۰۰۰ mbps</div></li>
+                          <li class="w-1/4 lg:w-1/2 md:w-1/3 sm:w-1/2 xs:w-full"><div class="px-2 py-1 text-xs font-medium">ترافیک : نامحدود</div></li>
+                          <li class="w-1/4 lg:w-1/2 md:w-1/3 sm:w-1/2 xs:w-full"><div class="px-2 py-1 text-xs font-medium">راه اندازی رایگان</div></li>
+                          <li class="w-1/4 lg:w-1/2 md:w-1/3 sm:w-1/2 xs:w-full"><div class="px-2 py-1 text-xs font-medium">هارد ۱۰۰ گیگابایت SSD</div></li>
+                          <li class="w-1/4 lg:w-1/2 md:w-1/3 sm:w-1/2 xs:w-full"><div class="px-2 py-1 text-xs font-medium">آیپی : valid (ipv4)</div></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="w-4/12 lg:w-5/12 md:w-full">
+          <div class="p-2">
+            <div class="border-gray-300 border rounded-lg bg-white p-6 lg:p-4">
+              <div class="divide-y divide-primary-gray/20">
+                <div class="flex items-center justify-between py-4 -mt-4">
+                  <p class="text-sm font-bold">قیمت کالا (<span>۱</span>)</p>
+                  <span class="font-light">۵۲۰،۰۰۰ تومان</span>
+                </div>
+
+                <div class=" py-4">
+                  <p class="text-sm font-bold mb-2">کد تخفیف</p>
+                  <form class="flex justify-between">
+                    <input type="text" name="" id="" placeholder="کد تخفیف خود را وارد کنید" class="rounded-l-none grow border-l-0">
+                    <button class="btn btn-sm btn-secondary rounded-r-none">ثبت</button>
+                  </form>
+                </div>
+
+                <div class="flex items-center justify-between py-4">
+                  <p class="text-sm font-bold">مالیات بر ارزش افزوده</p>
+                  <span class="font-light">۵،۲۰۰ تومان</span>
+                </div>
+
+                <div class="flex items-center justify-between py-4">
+                  <p class="text-sm font-bold">قیمت کل</p>
+                  <span class="font-light text-primary">۵۲۵،۲۰۰ تومان</span>
+                </div>
+              </div>
+
+              <button class="btn btn-lg btn-primary w-full mt-8">ادامه خرید و تسویه</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <include src="./components/footer.html"></include>
+</body>
+</html>
