@@ -12,3 +12,25 @@
     @apply h-0.5 w-0 bg-primary-gray/30 rounded-full absolute right-0 bottom-0 z-20 transition-[width];
   }
 }
+
+.custom-scrollbar {
+  /* width */
+  &::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    @apply bg-primary-50 rounded-lg;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-lg;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-600;
+  }
+}

@@ -77,35 +77,18 @@
       // TODO: style [after] element
       // TODO: customize scroll
     }
+
+    [class*='overflow'] {
+      @apply pl-4;
+
+      @extend .custom-scrollbar;
+    }
   }
 
   [data-scroll-overlay='0'] {
     &::before,
     &::after {
       @apply opacity-0;
-    }
-  }
-
-  [class*='overflow'] {
-    @apply pl-4;
-    /* width */
-    &::-webkit-scrollbar {
-      @apply w-2;
-    }
-
-    /* Track */
-    &::-webkit-scrollbar-track {
-      @apply bg-primary-50 rounded-lg;
-    }
-
-    /* Handle */
-    &::-webkit-scrollbar-thumb {
-      @apply bg-primary rounded-lg;
-    }
-
-    /* Handle on hover */
-    &::-webkit-scrollbar-thumb:hover {
-      @apply bg-primary-600;
     }
   }
 }

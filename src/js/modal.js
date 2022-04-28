@@ -14,7 +14,8 @@ export default (function () {
       target.classList.add('active');
 
       // close btn
-      const closeModalBtn = target.querySelectorAll('.close-modal-btn');
+      // prettier-ignore
+      const closeModalBtn = target.querySelectorAll('[class*="close-modal-btn"]');
       if (closeModalBtn.length) {
         closeModalBtn.forEach((item) => {
           item.addEventListener('click', closeModal, { once: true });

@@ -19,7 +19,7 @@
 
   .modal-inner {
     @apply relative;
-    .close-modal-btn {
+    .close-modal-btn-custom {
       @apply absolute top-6 left-6 cursor-pointer;
     }
   }
