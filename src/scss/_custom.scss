@@ -53,14 +53,59 @@
     @apply hidden lg:block bg-white;
   }
 
-  .overlay {
-    @apply fixed top-0 right-0 h-screen w-screen bg-black-lighten/50  pointer-events-none backdrop-filter backdrop-blur-sm opacity-0 transition-opacity;
-    margin: 0 !important;
-    padding: 0 !important;
-    z-index: 9998;
+  [data-scroll-overlay] {
+    @apply relative;
 
-    &.active {
-      @apply opacity-100 pointer-events-auto;
+    &::before {
+      content: '';
+      @apply bg-gradient-to-b from-transparent to-white absolute w-full h-36 bottom-0 pointer-events-none transition;
+    }
+
+    &::after {
+      font-family: icons, IRANSansX !important;
+      font-style: normal;
+      font-weight: normal !important;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+
+      content: 'اسکورل کنید \f104';
+      @apply absolute w-full text-center bottom-0 pointer-events-none font-bold text-sm transition py-3;
+
+      // TODO: style [after] element
+      // TODO: customize scroll
+    }
+  }
+
+  [data-scroll-overlay='0'] {
+    &::before,
+    &::after {
+      @apply opacity-0;
+    }
+  }
+
+  [class*='overflow'] {
+    @apply pl-4;
+    /* width */
+    &::-webkit-scrollbar {
+      @apply w-2;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      @apply bg-primary-50 rounded-lg;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      @apply bg-primary rounded-lg;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      @apply bg-primary-600;
     }
   }
 }

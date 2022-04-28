@@ -19,7 +19,7 @@
       stroke, opacity, box-shadow;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
-    @apply border focus:border-primary-500 rounded-lg ring-0 focus:ring-primary-100 focus:ring-4 box-border;
+    @apply border border-[#CBCBCB] focus:border-primary-500 rounded ring-0 focus:ring-primary-100 focus:ring-4 box-border placeholder:text-gray-400 text-sm px-4 py-3;
   }
 
   [type='checkbox'],
@@ -28,7 +28,7 @@
       stroke, opacity, box-shadow;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
-    @apply border-primary-600 text-primary-600 shadow-sm focus:border-primary-600 focus:ring-primary-600;
+    @apply border-primary text-primary shadow-sm focus:border-primary focus:ring-primary rounded;
   }
 
   .input-group {
@@ -44,7 +44,7 @@
   }
 
   .toggle span {
-    @apply bg-primary-600 rounded-full h-4 w-4 block absolute left-1 top-1 transform -m-0;
+    @apply bg-primary rounded-full h-4 w-4 block absolute left-1 top-1 transform -m-0;
     transition-property: left, transform, margin-left, background;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
@@ -62,6 +62,6 @@
   }
 
   .toggle input:checked ~ div {
-    @apply bg-primary-600;
+    @apply bg-primary;
   }
 }

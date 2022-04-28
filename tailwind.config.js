@@ -66,5 +66,6 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('tailwind-table-padding'),
     require('tailwindcss-hero-patterns'),
+    require('tailwind-children'),
   ],
 };

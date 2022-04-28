@@ -1,5 +1,6 @@
 import '../scss/tailwind.scss';
 import './accordion';
+import './modal';
 
 const searchBtn = document.querySelector('#searchBtn');
 const searchBox = document.querySelector('#searchBox');
@@ -44,3 +45,21 @@ window.addEventListener('load', function () {
     }).addTo(map);
   }
 }); // end onload
+
+// check if [data-scroll-overlay] elements pass to end
+
+const scrollOverlays = document.querySelectorAll('[data-scroll-overlay]');
+if (scrollOverlays.length) {
+  scrollOverlays.forEach((item) => {
+    item
+      .querySelector('[class*="overflow"]')
+      .addEventListener('scroll', (e) => {
+        const scrollSize = e.target.scrollTop + e.target.offsetHeight;
+        const scrollHeight = e.target.scrollHeight;
+
+        scrollSize === scrollHeight
+          ? item.setAttribute('data-scroll-overlay', 0)
+          : item.setAttribute('data-scroll-overlay', '');
+      });
+  });
+}

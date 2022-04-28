@@ -1,0 +1,26 @@
+@layer components {
+  .modal {
+    @apply bg-white shadow-xl fixed pointer-events-none transform -translate-y-1/2 translate-x-1/2 scale-90 top-2/4 right-2/4 origin-center transition duration-200 ease-in-out z-50 rounded-lg opacity-0;
+  }
+
+  .modal.active {
+    @apply -translate-y-1/2 translate-x-1/2 scale-100 pointer-events-auto opacity-100;
+  }
+
+  .overlay {
+    @apply fixed top-0 right-0 h-screen w-screen bg-gray-900/50  pointer-events-none backdrop-filter backdrop-blur-sm opacity-0 transition-opacity z-40;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    &.active {
+      @apply opacity-100 pointer-events-auto;
+    }
+  }
+
+  .modal-inner {
+    @apply relative;
+    .close-modal-btn {
+      @apply absolute top-6 left-6 cursor-pointer;
+    }
+  }
+}
