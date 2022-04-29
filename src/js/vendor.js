@@ -28,3 +28,21 @@ const swiper = new Swiper('.header-swiper .swiper-handler', {
   },
   loop: true,
 });
+
+const softWareSlider = new Swiper('.software-swiper .swiper-handler', {
+  navigation: {
+    nextEl: '.software-swiper .swiper-button-next',
+    prevEl: '.software-swiper .swiper-button-prev',
+  },
+  slidesPerView: 4,
+  spaceBetween: 10,
+
+  breakpoints: {
+    1280: {
+      slidesPerView: 12,
+    },
+    480: {
+      slidesPerView: 8,
+    },
+  },
+});

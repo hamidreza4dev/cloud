@@ -91,4 +91,10 @@
       @apply opacity-0;
     }
   }
+
+  .software-swiper {
+    --swiper-theme-color: #00afc1;
+    --swiper-navigation-size: 20px;
+    @apply select-none;
+  }
 }
