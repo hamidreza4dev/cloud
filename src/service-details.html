@@ -5,10 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-
-  <!-- leaflet-js -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
-  <script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 </head>
 <body>
 
@@ -20,9 +16,17 @@
   <section class="heropattern-tictactoe-primary-white py-24">
     <div class="container">
       <h1 class="font-bold">انتخاب زمان استفاده از سرویس</h1>
-      <div class="flex-wrap">
+      <div class="flex flex-wrap">
         <div class="w-1/2">
-          <div class="px-2"></div>
+          <div class="px-2">
+            <div class="grid grid-cols-2 gap-2 border-gray-300 border rounded-lg bg-white p-3">
+              <label class="w-full" for="startDate">تاریخ شروع</label>
+              <label class="w-full" for="toDate">تاریخ پایان</label>
+
+              <input class="w-full flatpickr flatpickr-input" type="text" readonly="readonly" id="startDate">
+              <input class="w-full flatpickr flatpickr-input" type="text" readonly="readonly" id="toDate" data-fp-omit="">
+            </div>
+          </div>
         </div>
         <div class="w-1/2">
           <div class="px-2">
