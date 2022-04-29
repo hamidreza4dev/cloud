@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- leaflet-js -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+  <script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+</head>
+<body>
+
+  <header>
+    <include src="./components/nav.html"></include>
+  </header>
+
+
+  <section class="heropattern-tictactoe-primary-white py-24">
+    <div class="container">
+      <h1 class="font-bold">انتخاب زمان استفاده از سرویس</h1>
+      <div class="flex-wrap">
+        <div class="w-1/2">
+          <div class="px-2"></div>
+        </div>
+        <div class="w-1/2">
+          <div class="px-2">
+            <div class="border-gray-300 border rounded-lg bg-white p-3">
+              <div class="grid grid-cols-2 gap-2 mb-2">
+                <button class="grow btn btn-sm btn-alternative" id="selectTimes">انتخاب تمام ساعت های موجود</button>
+                <button class="grow btn btn-sm btn-alternative" id="deleteTimes">حذف تمام ساعت های انتخاب شده</button>
+              </div>
+
+              <div class="grid grid-cols-4 gap-2 text-center" id="timeContainer">
+                <div><input disabled type="checkbox"  name="time-1" id="time-1"  class="hidden peer"><label  for="time-1" class="cursor-pointer select-none text-primary-gray bg-primary-gray/5 peer-disabled:opacity-30 peer-checked:bg-primary peer-checked:text-white p-2 rounded-md block transition">۰۰:۰۰ - ۰۱:۰۰</label></div>
+                <div><input disabled type="checkbox"  name="time-2" id="time-2"  class="hidden peer"><label  for="time-2" class="cursor-pointer select-none text-primary-gray bg-primary-gray/5 peer-disabled:opacity-30 peer-checked:bg-primary peer-checked:text-white p-2 rounded-md block transition">۰۱:۰۰ - ۰۲:۰۰</label></div>
+                <div><input disabled type="checkbox"  name="time-3" id="time-3"  class="hidden peer"><label  for="time-3" class="cursor-pointer select-none text-primary-gray bg-primary-gray/5 peer-disabled:opacity-30 peer-checked:bg-primary peer-checked:text-white p-2 rounded-md block transition">۰۲:۰۰ - ۰۳:۰۰</label></div>
+                <div><input disabled type="checkbox"  name="time-4" id="time-4"  class="hidden peer"><label  for="time-4" class="cursor-pointer select-none text-primary-gray bg-primary-gray/5 peer-disabled:opacity-30 peer-checked:bg-primary peer-checked:text-white p-2 rounded-md block transition">۰۳:۰۰ - ۰۴:۰۰</label></div>
+                <div><input disabled type="checkbox"  name="time-5" id="time-5"  class="hidden peer"><label  for="time-5" class="cursor-pointer select-none text-primary-gray bg-primary-gray/5 peer-disabled:opacity-30 peer-checked:bg-primary peer-checked:text-white p-2 rounded-md block transition">۰۴:۰۰ - ۰۵:۰۰</label></div>
+                <div><input disabled type="checkbox"  name="time-6" id="time-6"  class="hidden peer"><label  for="time-6" class="cursor-pointer select-none text-primary-gray bg-primary-gray/5 peer-disabled:opacity-30 peer-checked:bg-primary peer-checked:text-white p-2 rounded-md block transition">۰۵:۰۰ - ۰۶:۰۰</label></div>
+                <div><input          type="checkbox"  name="time-7" id="time-7"  class="hidden peer"><label  for="time-7" class="cursor-pointer select-none text-primary-gray bg-primary-gray/5 peer-disabled:opacity-30 peer-checked:bg-primary peer-checked:text-white p-2 rounded-md block transition">۰۶:۰۰ - ۰۷:۰۰</label></div>
+                <div><input          type="checkbox"  name="time-8" id="time-8"  class="hidden peer"><label  for="time-8" class="cursor-pointer select-none text-primary-gray bg-primary-gray/5 peer-disabled:opacity-30 peer-checked:bg-primary peer-checked:text-white p-2 rounded-md block transition">۰۷:۰۰ - ۰۸:۰۰</label></div>
+                <div><input          type="checkbox"  name="time-9" id="time-9"  class="hidden peer"><label  for="time-9" class="cursor-pointer select-none text-primary-gray bg-primary-gray/5 peer-disabled:opacity-30 peer-checked:bg-primary peer-checked:text-white p-2 rounded-md block transition">۰۸:۰۰ - ۰۹:۰۰</label></div>
+                <div><input          type="checkbox" name="time-10" id="time-10" class="hidden peer"><label for="time-10" class="cursor-pointer select-none text-primary-gray bg-primary-gray/5 peer-disabled:opacity-30 peer-checked:bg-primary peer-checked:text-white p-2 rounded-md block transition">۰۹:۰۰ - ۱۰:۰۰</label></div>
+                <div><input          type="checkbox" name="time-11" id="time-11" class="hidden peer"><label for="time-11" class="cursor-pointer select-none text-primary-gray bg-primary-gray/5 peer-disabled:opacity-30 peer-checked:bg-primary peer-checked:text-white p-2 rounded-md block transition">۱۰:۰۰ - ۱۱:۰۰</label></div>
+                <div><input          type="checkbox" name="time-12" id="time-12" class="hidden peer"><label for="time-12" class="cursor-pointer select-none text-primary-gray bg-primary-gray/5 peer-disabled:opacity-30 peer-checked:bg-primary peer-checked:text-white p-2 rounded-md block transition">۱۱:۰۰ - ۱۲:۰۰</label></div>
+                <div><input          type="checkbox" name="time-13" id="time-13" class="hidden peer"><label for="time-13" class="cursor-pointer select-none text-primary-gray bg-primary-gray/5 peer-disabled:opacity-30 peer-checked:bg-primary peer-checked:text-white p-2 rounded-md block transition">۱۲:۰۰ - ۱۳:۰۰</label></div>
+                <div><input          type="checkbox" name="time-14" id="time-14" class="hidden peer"><label for="time-14" class="cursor-pointer select-none text-primary-gray bg-primary-gray/5 peer-disabled:opacity-30 peer-checked:bg-primary peer-checked:text-white p-2 rounded-md block transition">۱۳:۰۰ - ۱۴:۰۰</label></div>
+                <div><input          type="checkbox" name="time-15" id="time-15" class="hidden peer"><label for="time-15" class="cursor-pointer select-none text-primary-gray bg-primary-gray/5 peer-disabled:opacity-30 peer-checked:bg-primary peer-checked:text-white p-2 rounded-md block transition">۱۴:۰۰ - ۱۵:۰۰</label></div>
+                <div><input          type="checkbox" name="time-16" id="time-16" class="hidden peer"><label for="time-16" class="cursor-pointer select-none text-primary-gray bg-primary-gray/5 peer-disabled:opacity-30 peer-checked:bg-primary peer-checked:text-white p-2 rounded-md block transition">۱۵:۰۰ - ۱۶:۰۰</label></div>
+                <div><input          type="checkbox" name="time-17" id="time-17" class="hidden peer"><label for="time-17" class="cursor-pointer select-none text-primary-gray bg-primary-gray/5 peer-disabled:opacity-30 peer-checked:bg-primary peer-checked:text-white p-2 rounded-md block transition">۱۶:۰۰ - ۱۷:۰۰</label></div>
+                <div><input          type="checkbox" name="time-18" id="time-18" class="hidden peer"><label for="time-18" class="cursor-pointer select-none text-primary-gray bg-primary-gray/5 peer-disabled:opacity-30 peer-checked:bg-primary peer-checked:text-white p-2 rounded-md block transition">۱۷:۰۰ - ۱۸:۰۰</label></div>
+                <div><input          type="checkbox" name="time-19" id="time-19" class="hidden peer"><label for="time-19" class="cursor-pointer select-none text-primary-gray bg-primary-gray/5 peer-disabled:opacity-30 peer-checked:bg-primary peer-checked:text-white p-2 rounded-md block transition">۱۸:۰۰ - ۱۹:۰۰</label></div>
+                <div><input          type="checkbox" name="time-20" id="time-20" class="hidden peer"><label for="time-20" class="cursor-pointer select-none text-primary-gray bg-primary-gray/5 peer-disabled:opacity-30 peer-checked:bg-primary peer-checked:text-white p-2 rounded-md block transition">۱۹:۰۰ - ۲۰:۰۰</label></div>
+                <div><input          type="checkbox" name="time-21" id="time-21" class="hidden peer"><label for="time-21" class="cursor-pointer select-none text-primary-gray bg-primary-gray/5 peer-disabled:opacity-30 peer-checked:bg-primary peer-checked:text-white p-2 rounded-md block transition">۲۰:۰۰ - ۲۱:۰۰</label></div>
+                <div><input          type="checkbox" name="time-22" id="time-22" class="hidden peer"><label for="time-22" class="cursor-pointer select-none text-primary-gray bg-primary-gray/5 peer-disabled:opacity-30 peer-checked:bg-primary peer-checked:text-white p-2 rounded-md block transition">۲۱:۰۰ - ۲۲:۰۰</label></div>
+                <div><input          type="checkbox" name="time-23" id="time-23" class="hidden peer"><label for="time-23" class="cursor-pointer select-none text-primary-gray bg-primary-gray/5 peer-disabled:opacity-30 peer-checked:bg-primary peer-checked:text-white p-2 rounded-md block transition">۲۲:۰۰ - ۲۳:۰۰</label></div>
+                <div><input          type="checkbox" name="time-24" id="time-24" class="hidden peer"><label for="time-24" class="cursor-pointer select-none text-primary-gray bg-primary-gray/5 peer-disabled:opacity-30 peer-checked:bg-primary peer-checked:text-white p-2 rounded-md block transition">۲۳:۰۰ - ۲۴:۰۰</label></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <include src="./components/footer.html"></include>
+</body>
+</html>

@@ -63,3 +63,21 @@ if (scrollOverlays.length) {
       });
   });
 }
+
+const selectTimes = document.getElementById('selectTimes');
+const deleteTimes = document.getElementById('deleteTimes');
+const timeContainer = document.getElementById('timeContainer');
+
+if (timeContainer) {
+  function checkboxTrigger(state) {
+    const checkboxes = timeContainer.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach((checkbox) => {
+      if (!checkbox.disabled) {
+        checkbox.checked = state;
+      }
+    });
+  }
+
+  selectTimes.addEventListener('click', checkboxTrigger.bind(null, true));
+  deleteTimes.addEventListener('click', checkboxTrigger.bind(null, false));
+}
