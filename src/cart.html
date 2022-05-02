@@ -21,12 +21,12 @@
             <div class="border-gray-300 border rounded-lg bg-white p-6 lg:p-4">
               <div class="flex items-center justify-between">
                 <h1 class="text-xl font-bold sm:font-base xs:text-sm">سبد خرید شما :</h1>
-                <button class="btn btn-sm btn-icon text-red-500 rounded-lg hover:bg-red-500/10 sm:p-0 sm:hover:bg-white xs:text-xs"><i class="icon icon-trash sm:!text-sm"></i>پاک کردن سبد خرید</button>
+                <button id="clearAllCart" class="btn btn-sm btn-icon text-red-500 rounded-lg hover:bg-red-500/10 sm:p-0 sm:hover:bg-white xs:text-xs"><i class="icon icon-trash sm:!text-sm pointer-events-none"></i>پاک کردن سبد خرید</button>
               </div>
 
-              <div class="mt-4 space-y-2">
-                <div class="font-light flex overflow-hidden border-gray-300 border rounded-lg bg-white xs:flex-col">
-                  <div class="grow-0 flex flex-col items-center bg-secondary-50 py-3 px-6">
+              <div class="mt-4 space-y-2" id="shoppingCartContainer">
+                <div class="cart-element font-light flex overflow-hidden border-gray-300 border rounded-lg bg-white xs:flex-col">
+                  <div class="grow-0 flex flex-col items-center bg-primary-50 py-3 px-6">
                     <div><img src="./assets/icons/gpu.svg" alt=""></div>
                     <p class="text-primary whitespace-nowrap">۵۲۰،۰۰۰ تومان</p>
                   </div>
@@ -34,7 +34,7 @@
                     <div class="p-3 flex flex-col h-full">
                       <div class="flex justify-between">
                         <h1 class="font-bold">سرویس CPU rendering</h1>
-                        <span class="cursor-pointer"><i class="icon icon-trash text-red-500"></i></span>
+                        <span class="cursor-pointer" onclick="event.target.closest('.cart-element').remove()"><i class="icon icon-trash text-red-500 pointer-events-none"></i></span>
                       </div>
 
                       <div class="mt-auto">
@@ -53,8 +53,8 @@
                   </div>
                 </div>
 
-                <div class="font-light flex overflow-hidden border-gray-300 border rounded-lg bg-white xs:flex-col">
-                  <div class="grow-0 flex flex-col items-center bg-secondary-50 py-3 px-6">
+                <div class="cart-element font-light flex overflow-hidden border-gray-300 border rounded-lg bg-white xs:flex-col">
+                  <div class="grow-0 flex flex-col items-center bg-primary-50 py-3 px-6">
                     <div><img src="./assets/icons/gpu.svg" alt=""></div>
                     <p class="text-primary whitespace-nowrap">۵۲۰،۰۰۰ تومان</p>
                   </div>
@@ -62,7 +62,7 @@
                     <div class="p-3 flex flex-col h-full">
                       <div class="flex justify-between">
                         <h1 class="font-bold">سرویس CPU rendering</h1>
-                        <span class="cursor-pointer"><i class="icon icon-trash text-red-500"></i></span>
+                        <span class="cursor-pointer" onclick="event.target.closest('.cart-element').remove()"><i class="icon icon-trash text-red-500 pointer-events-none"></i></span>
                       </div>
 
                       <div class="mt-auto">
@@ -99,7 +99,7 @@
                   <p class="text-sm font-bold mb-2">کد تخفیف</p>
                   <form class="flex justify-between">
                     <input type="text" name="" id="" placeholder="کد تخفیف خود را وارد کنید" class="rounded-l-none grow border-l-0 min-w-0">
-                    <button class="btn btn-sm btn-secondary rounded-r-none">ثبت</button>
+                    <button class="btn btn-sm btn-primary rounded-r-none">ثبت</button>
                   </form>
                 </div>
 

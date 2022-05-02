@@ -81,3 +81,12 @@ if (timeContainer) {
   selectTimes.addEventListener('click', checkboxTrigger.bind(null, true));
   deleteTimes.addEventListener('click', checkboxTrigger.bind(null, false));
 }
+
+const clearAllCart = document.getElementById('clearAllCart');
+const shoppingCartContainer = document.getElementById('shoppingCartContainer');
+
+if (clearAllCart) {
+  clearAllCart.addEventListener('click', () => {
+    [...shoppingCartContainer.children].forEach((item) => item.remove());
+  });
+}
